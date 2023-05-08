@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chiara Bonzano -  GSAP</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+</head>
+<body>
+  <div class="wrapper">
+    <!-- div.box*3 -->
+    <div class="box box-1" id="animate"></div>
+    <div class="box box-2"></div>
+    <div class="box box-3"></div>
+  </div>
+
+  <script>
+    // JavaScript comment
+    // alert(ciao friend)
+    // log a message to the console
+    console.log("come va?")
+    // gasp
+    // https://greensock.com/docs/v3/GSAP
+    // gsap library, .to() method, "" selector
+    // Tween
+    gsap.to(".box", { duration: 1, delay: 1, backgroundColor: "#red" });
+    // Timeline
+    var ourTimeline = gsap.timeline();
+    ourTimeline.to(".box-1", { duration: 2, x: 100, rotation: 45 });
+    ourTimeline.to(".box-2", { duration: 2, x: 100, rotation: 45 }, "-=1");
+    ourTimeline.to(".box-3", { duration: 2, x: 100, rotation: 45 }, "-=1");
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+:root {
+  --padding: 40px;
+  /* var(--padding) */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  min-height: 100%;
+
+  /* center the children */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  /* --padding: 10px; --> to reassign the value of the padding, this value is applied just in the .box class and not inherited in the others because it is setted in the "smaller" class. 
+  If I change the value in the .wrapper class it is applied in the .box class as well. This is called the "variable scope".*/
+
+  margin: var(--padding);
+  padding: var(--padding);
+  
+  background-color:  midnightblue;
+}
+
+.wrapper {
+  padding: var(--padding);
+
+  background-color: blue;
+}
+
+/* SHORTCUT: shift + up or down arrow to select; shift + option + arrow to duplicate; option + arrow to move the copied item */
+
+
